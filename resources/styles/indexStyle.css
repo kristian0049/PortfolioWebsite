@@ -1,0 +1,52 @@
+@import url(./font-families.css);
+/*
+Main Color: #520df2 
+Complimentary Color: #ADF20D
+2nd Complimentary Color: #0df2c5
+3rd Complimentary Color: #F20D3A
+*/
+body{
+    background-color: #520df2;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+header{
+    text-align: center;
+    height:8rem;
+    width:20rem;
+    background-color:linear-gradient(45deg,#F20D3A,#0df2c5);
+    border: 0.3rem solid #0df2c5 ;
+    border-radius: 2rem;
+    margin:0 auto;
+    
+}
+header h1{
+    font-weight: 900;
+    font-style: italic;
+}
+#pages a{
+    background-color:#ADF20D ;
+    padding:0.5rem;
+    margin-left:2rem;
+    margin-right:2rem;
+}
+main{
+    background-image:linear-gradient(90deg,#F20D3A 80%,#0df2c5);
+    padding:1rem 1rem;
+    margin:1rem 1rem;
+    display:flex;
+    flex-wrap:wrap;
+}
+footer{
+    text-align: center;
+     margin:0 1rem; 
+    padding:0.5rem 1rem;
+    background-color: #0df2c5;
+    width:auto;
+    height:10rem;
+}
+footer a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+}
