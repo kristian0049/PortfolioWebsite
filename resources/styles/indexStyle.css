@@ -1,19 +1,13 @@
 @import url(./font-families.css);
-/*
-Main Color: #520df2 
-Complimentary Color: #ADF20D
-2nd Complimentary Color: #0df2c5
-3rd Complimentary Color: #F20D3A
-*/
+@import url(./colors.css);
 
+input:active {outline:none;}
 body{
-    background-color: #5a4e5a;
+    background-color: var(--background);
     font-family: 'Open Sans', sans-serif;
     color: white;
     margin:0;
     padding:0;
-    width:100%;
-    height:100%;
     font-size:16px;
 }
 @media screen and (max-width:768px){
@@ -23,53 +17,74 @@ body{
 }
 header{
     text-align: center;
-    height:2rem;
-    background-color: color-mix(in srgb, #5a4e5a 100%, #fff 10%) ;
+    height:3rem;
+    background-color: color-mix(in srgb, var(--background) 100%, #fff 10%) ;
+    box-shadow: -15px -10px 20px #ffffff, 
+    25px 30px 50px #000000;;
     opacity: 100%;
     margin:2rem auto;
+    position: relative;
+    width:90%;
+    border-radius:2rem;
+}
 
-}
-header h1{
-    font-weight: 900;
-    font-style: italic;
-}
-header #pages{
+#pages{
+    height:100%;
     display:flex;
 }
 
 #pages a{
-    background-color:#fff ;
-    border-radius: 5rem;
-    padding:0.5rem 0;
-    margin:0 0.5rem;
+    color:white;
     text-decoration: none;
-    color:black;
-    flex:1;
+    height:1.25rem;
+    width:5rem;
+    background: linear-gradient(-45deg, rgba(0,0,0,0.5), rgba(255,255,255,0.25));
+    box-shadow: -7px -2px 15px #ffffff, 
+    5px 10px 1px #000000;
+    border-radius: 5rem;
+    -webkit-tap-highlight-color: transparent;
+}
+#pages a:active{
+    
+    background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.35));
 }
 @media screen and (min-width: 320px) {
     header{
-        width:20rem;
+        height:13rem;
+    }
+    #pages{
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height:100%;
+        width:100%;
     }
     #pages a{
-        padding:0.5rem 0;
-        margin:0 0.5rem;
+        padding:1rem 0.5rem;
+        width:50%;
     }
 }
 @media screen and (min-width: 768px) {
     header{
-        width:24rem;
+        height:4rem;
     }
-    #pages a{
-        padding:0.5rem 0;
-        margin:0 1rem;
+    #pages{
+        flex-direction:row;
     }
     
+    #pages a{
+        padding:0.5rem 0;
+        width:20%;
+    }
 }
 @media screen and (min-width: 1024px) {
     header{
         width:26rem;
-        height:3rem;
+        
         padding:1rem 1rem;
+    }
+    #pages{
+        
     }
     #pages a{
         padding:0.7rem 0;
@@ -78,22 +93,39 @@ header #pages{
 
 }
 main{
-    width:100%;
-    display:grid;
+    width:60%;
+    display:inline-flex;
+    margin:2rem auto;    
     grid-template-columns: repeat(2,1fr);
     grid-template-rows:0.4fr 1fr;
+    justify-content: space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    
 }
 
 main h1{
-    grid-area:1/1/span 1 / span 2;
-    justify-self:center;
+    width:30.5rem;
+    flex-grow:1;
+    text-align: center;
+    font-weight: 900;
+    font-style: italic;
+    
+
+}
+#bio{
+    width:25rem;
+    background-color: var(--text);
 }
 #myPic{
-    grid-area: 2/2/span 1 /span 1;
     justify-self: center;
+    flex-grow:1;
+    width:30rem;
 }
 
 #myPic img{
+    height:34.375rem;
+    width:100%;
     border:1px solid white;
     border-radius: 5rem;
     padding: 1rem;

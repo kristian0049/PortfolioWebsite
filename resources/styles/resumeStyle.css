@@ -1,4 +1,7 @@
 @import url(./font-families.css);
+@import url(./colors.css);
+
+
 body{
     background-color: #5a4e5a;
     font-family: 'Open Sans', sans-serif;

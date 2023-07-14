@@ -1,0 +1,22 @@
+:root {
+    --text-color: #ffffff;
+    --background: #5a4e5a;
+    --primary: #ffffff;
+    --secondary: #fff9f9;
+    --accent: #bda7be;
+    --blackColor:#000;
+
+    /**/
+    /*Neumorphism values*/
+    --tX: -5px;/*top offset X value*/
+    --tY: -3px;/*top offset Y value*/
+    --tB: -10px;/*top blur*/
+
+    --bX: 5px;/*bottom offset X value*/
+    --bY: 10px;/*bottom offset Y value*/
+    --bB: 5px;/*bottom blue*/
+
+    --shadowBox: -5x -3px -10px rgba(var(--text-color),0.08),
+    5px 10px 5px #000;
+
+}
