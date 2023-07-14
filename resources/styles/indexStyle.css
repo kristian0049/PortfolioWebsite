@@ -5,45 +5,116 @@ Complimentary Color: #ADF20D
 2nd Complimentary Color: #0df2c5
 3rd Complimentary Color: #F20D3A
 */
+
 body{
-    background-color: #520df2;
+    background-color: #5a4e5a;
     font-family: 'Open Sans', sans-serif;
     color: white;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    font-size:16px;
+}
+@media screen and (max-width:768px){
+    body{
+        font-size:14px;
+    }
 }
 header{
     text-align: center;
-    height:8rem;
-    width:20rem;
-    background-color:linear-gradient(45deg,#F20D3A,#0df2c5);
-    border: 0.3rem solid #0df2c5 ;
-    border-radius: 2rem;
-    margin:0 auto;
-    
+    height:2rem;
+    background-color: color-mix(in srgb, #5a4e5a 100%, #fff 10%) ;
+    opacity: 100%;
+    margin:2rem auto;
+
 }
 header h1{
     font-weight: 900;
     font-style: italic;
 }
+header #pages{
+    display:flex;
+}
+
 #pages a{
-    background-color:#ADF20D ;
-    padding:0.5rem;
-    margin-left:2rem;
-    margin-right:2rem;
+    background-color:#fff ;
+    border-radius: 5rem;
+    padding:0.5rem 0;
+    margin:0 0.5rem;
+    text-decoration: none;
+    color:black;
+    flex:1;
+}
+@media screen and (min-width: 320px) {
+    header{
+        width:20rem;
+    }
+    #pages a{
+        padding:0.5rem 0;
+        margin:0 0.5rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    header{
+        width:24rem;
+    }
+    #pages a{
+        padding:0.5rem 0;
+        margin:0 1rem;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    header{
+        width:26rem;
+        height:3rem;
+        padding:1rem 1rem;
+    }
+    #pages a{
+        padding:0.7rem 0;
+        margin:0 1rem;
+    }
+
 }
 main{
-    background-image:linear-gradient(90deg,#F20D3A 80%,#0df2c5);
-    padding:1rem 1rem;
-    margin:1rem 1rem;
-    display:flex;
-    flex-wrap:wrap;
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:0.4fr 1fr;
 }
+
+main h1{
+    grid-area:1/1/span 1 / span 2;
+    justify-self:center;
+}
+#myPic{
+    grid-area: 2/2/span 1 /span 1;
+    justify-self: center;
+}
+
+#myPic img{
+    border:1px solid white;
+    border-radius: 5rem;
+    padding: 1rem;
+    background-color: white;
+}
+
+@media screen and (min-width: 320px){
+    
+}
+@media screen and (min-width: 768px){
+   
+}
+
+@media screen and (min-width: 1024px){
+    
+}
+
+
 footer{
-    text-align: center;
-     margin:0 1rem; 
-    padding:0.5rem 1rem;
-    background-color: #0df2c5;
-    width:auto;
-    height:10rem;
+    text-align: center; 
+    width:100%;
 }
 footer a{
     text-decoration: none;
