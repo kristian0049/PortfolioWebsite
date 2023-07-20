@@ -3,7 +3,7 @@
 
 input:active {outline:none;}
 body{
-    background-color: var(--background);
+    background-color: gray;
     font-family: 'Open Sans', sans-serif;
     color: white;
     margin:0;
@@ -19,13 +19,15 @@ header{
     text-align: center;
     height:3rem;
     background-color: color-mix(in srgb, var(--background) 100%, #fff 10%) ;
-    box-shadow: -15px -10px 20px #ffffff, 
-    25px 30px 50px #000000;;
+    box-shadow:   /*-8px -8px 0px 8px   var(--whiteMixBackground),*/
+    8px 8px 0px 8px   var(--blackMixBackground),
+    -1px 0px 20px  #ffffff,  
+    20px 20px 10px 16px #000000;;
     opacity: 100%;
     margin:2rem auto;
     position: relative;
     width:90%;
-    border-radius:2rem;
+   
 }
 
 #pages{
@@ -34,23 +36,36 @@ header{
 }
 
 #pages a{
+    display:flex;
+    justify-content: center;
+    align-items: center; 
     color:white;
     text-decoration: none;
     height:1.25rem;
     width:5rem;
-    background: linear-gradient(-45deg, rgba(0,0,0,0.5), rgba(255,255,255,0.25));
-    box-shadow: -7px -2px 15px #ffffff, 
+    background: linear-gradient(-45deg, rgba(0,0,0,0.4), rgba(255,255,255,0.1));
+    box-shadow:-7px -2px 15px #ffffff, 
     5px 10px 1px #000000;
     border-radius: 5rem;
     -webkit-tap-highlight-color: transparent;
 }
+
+#pages a img{
+    width:32px;
+    height:32px;
+}
 #pages a:active{
-    
-    background: linear-gradient(135deg, rgba(0,0,0,0.22), rgba(255,255,255,0.35));
+    transform:scale(0.96);
+    background: linear-gradient(150deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 }
 @media screen and (min-width: 320px) {
     header{
-        height:13rem;
+        height:14rem;
+        width:70%;
+        left:-1.5rem;
+    }
+    .text-to-Hide{
+        display:none;
     }
     #pages{
         align-items: center;
@@ -66,7 +81,9 @@ header{
 }
 @media screen and (min-width: 768px) {
     header{
-        height:4rem;
+        height:8rem;
+        width:75%;
+        margin:2 auto;
     }
     #pages{
         flex-direction:row;
@@ -78,13 +95,12 @@ header{
     }
 }
 @media screen and (min-width: 1024px) {
-    header{
-        width:26rem;
-        
-        padding:1rem 1rem;
+    .text-to-Hide{
+        display:inline;
     }
-    #pages{
-        
+    header{
+        height:3rem;
+        padding:1rem 1rem;
     }
     #pages a{
         padding:0.7rem 0;
@@ -94,62 +110,203 @@ header{
 }
 main{
     width:60%;
-    display:inline-flex;
-    margin:2rem auto;    
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows:0.4fr 1fr;
-    justify-content: space-between;
-    align-items:flex-start;
-    flex-wrap:wrap;
+    background-color: color-mix(in srgb, var(--background) 100%, #fff 10%) ;
+    box-shadow: 10px 10px 0px 10px   var(--blackMixBackground),
+    -9px -5px 20px #ffffff, 
+    20px 20px 10px 20px #000000;
+    display:flex;
+    justify-content: center;
+    align-items:center;
     
 }
-
+#full-name{
+    width:100%;
+    flex:0 3 auto;
+}
+#full-name div{
+    width:21rem;
+    height:100%;
+    margin:0 auto;
+}
 main h1{
-    width:30.5rem;
-    flex-grow:1;
+    width:100%;
+    /*Text Customization*/
+    letter-spacing: 0.1em;
+    background: linear-gradient(150deg, rgba(0,0,0,0.3), rgba(255,255,255,0.3));
+    box-shadow:inset -2px -2px 5px rgba(0, 0, 0,1), 
+    inset 8px 8px 5px rgba(0, 0, 0,1);
+    transition:0.3s;
+    text-shadow: 1px 1px 0px  #ffffff, 
+    1px 1px 0px  var(--letterBackground), 
+    1px 2px 0px  var(--letterBackground), 
+    1px 3px 0px  var(--letterBackground), 
+    1px 4px 0px  var(--letterBackground), 
+    1px 5px 0px  var(--letterBackground), 
+    1px 6px 0px  var(--letterBackground),
+    1px 7px 0px  var(--letterBackground),
+    1px 8px 0px  var(--letterBackground),
+    4px 13px 2px #000000;
     text-align: center;
     font-weight: 900;
     font-style: italic;
+
+}
+
+#bio{
+    display:flex;
+    flex:2 1 auto;
     
 
 }
-#bio{
+
+#bio p{
     width:25rem;
     background-color: var(--text);
+    padding:1rem;
+    text-shadow:1px 2px 0px #000,
+    1px 3px 0px #000;
+    box-shadow:inset -2px -2px 5px  rgba(0, 0, 0,1), 
+    inset 8px 8px 5px rgba(0, 0, 0,1);
 }
-#myPic{
-    justify-self: center;
-    flex-grow:1;
-    width:30rem;
+#myPic{ 
+    background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(255,255,255,0.3));
+    box-shadow: 5px 5px 0px 5px   var(--blackMixBackground),
+    -9px -5px 20px #ffffff, 
+    10px 10px 10px 10px #000000;
+    border-radius:50rem; 
 }
 
 #myPic img{
     height:34.375rem;
     width:100%;
-    border:1px solid white;
-    border-radius: 5rem;
     padding: 1rem;
-    background-color: white;
+    border-radius:50rem; 
 }
 
 @media screen and (min-width: 320px){
+    main{
+        position: relative;
+        left:-20px;
+        width:80%;
+        height:50rem;
+        margin:6rem auto;  
+        flex-direction: column;
+    }
+    #full-name{
+        margin-top:1rem;
+    }
+    #full-name div{
+        width:14.5rem;
+    }
+    #full-name h1{
+        width:12.5rem;
+        font-size:1.4rem;
+        padding:0.5rem 0rem;
+        margin:auto auto;
+    }
+  
+    
+    #bio{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #bio p{
+        width:80%;
+    }
+    #myPic{
+        width:14rem;
+    }
+    #myPic img{
+        width:12rem;
+        height:14rem;
+    }
+    #role{
+    font-size:18px;
+   }
+    #role-experience{
+    font-size:14px;
+   }
+    
     
 }
 @media screen and (min-width: 768px){
+    main{
+        margin:6rem auto;  
+        
+    }
+    #full-name div{
+        width:15.7rem;
+    }
+    #full-name h1{
+        width:15.9rem;
+        padding:1rem 1rem;
+        font-size:1.8rem;
+    }
    
+    #myPic{
+        height:25rem;
+        width:23rem;
+    }
+    #myPic img{
+        width:92%;
+        height:93%;
+    }
 }
 
 @media screen and (min-width: 1024px){
-    
+    main{
+        height:70rem;
+    }
+    #full-name{
+        position: relative;
+        margin-top:4rem;
+    }
+    #full-name h1{
+        width:18rem;
+        padding:1rem 1rem;
+        
+    }
+    #bio{
+        height:0rem;
+        flex-direction: row;
+    }
+    #bio p{
+        width:30%;
+        align-self: center;
+
+    }
+    #myPic{
+        height:35rem;
+        width:28rem;
+    }
+    #myPic img{
+        width:94%;
+        height:95%;
+    }
+
 }
 
 
 footer{
+    background-color: var(--background);
     text-align: center; 
     width:100%;
+    height:18.1rem;
+    padding:3rem 0 3rem 0;
+    box-shadow:inset  -8px -8px 5px rgba(0, 0, 0,1), 
+    inset 25px 25px 25px rgba(0, 0, 0,1);
+
 }
 footer a{
     text-decoration: none;
     color:white;
     font-weight: 600;
+}
+
+@media screen and (min-width: 1024px){
+    .icons{
+        height:32px;
+        width:32px;
+    }
 }
