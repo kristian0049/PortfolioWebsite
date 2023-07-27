@@ -1,9 +1,11 @@
 # PortfolioWebsite
-A Portfolio website that includes my education, my experiences  and my skills
+Hello , my name is Kristian Kirkov and this is my Portfolio website.
 
-Website Plan:
-1.Wireframe the website
-2.Place the Elements
-3.What text should be included
-4.Start Styling the Page
+Programming Languages used:
+*HTML
+*CSS
+*Javascript
+Neumorphism for styling , which was recommended to me by a friend.
+I have unfinished the projects page, which will be updated in the future months.
+
 
