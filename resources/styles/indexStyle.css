@@ -3,27 +3,31 @@
 
 input:active {outline:none;}
 body{
-    background-color: gray;
+    background-color: var(--background);
     font-family: 'Open Sans', sans-serif;
     color: white;
     margin:0;
     padding:0;
     font-size:16px;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:769px){
     body{
         font-size:14px;
     }
 }
+@media screen and (min-width:768px){
+    body{
+        font-size:16px;
+    }
+}
+
 header{
     text-align: center;
     height:3rem;
-    background-color: color-mix(in srgb, var(--background) 100%, #fff 10%) ;
-    box-shadow:   /*-8px -8px 0px 8px   var(--whiteMixBackground),*/
-    8px 8px 0px 8px   var(--blackMixBackground),
-    -1px 0px 20px  #ffffff,  
-    20px 20px 10px 16px #000000;;
-    opacity: 100%;
+    background-color: var(--background);
+    box-shadow:/*8px 8px 0px 8px   var(--blackMixBackground),*/
+    -12px -12px 21px  var(--secondary),  
+    12px 12px 21px var(--primary);
     margin:2rem auto;
     position: relative;
     width:90%;
@@ -43,10 +47,9 @@ header{
     text-decoration: none;
     height:1.25rem;
     width:5rem;
-    background: linear-gradient(-45deg, rgba(0,0,0,0.4), rgba(255,255,255,0.1));
-    box-shadow:-7px -2px 15px #ffffff, 
-    5px 10px 1px #000000;
-    border-radius: 5rem;
+    background: linear-gradient(150deg, rgba(var(--primary),0.4), rgba(var(--secondary),0.1));
+    box-shadow:-7px -2px 15px var(--secondary), 
+    5px 10px 1px var(--primary);
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -56,13 +59,12 @@ header{
 }
 #pages a:active{
     transform:scale(0.96);
-    background: linear-gradient(150deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+    background: linear-gradient(300deg, rgba(var(--secondary),0.4), rgba(var(--primary) 0.1));
 }
 @media screen and (min-width: 320px) {
     header{
-        height:14rem;
+        height:8rem;
         width:70%;
-        left:-1.5rem;
     }
     .text-to-Hide{
         display:none;
@@ -70,13 +72,15 @@ header{
     #pages{
         align-items: center;
         justify-content: space-around;
-        flex-direction: column;
+        flex-direction: row;
         height:100%;
         width:100%;
     }
     #pages a{
         padding:1rem 0.5rem;
-        width:50%;
+        border-radius: 50rem;
+        height:2rem;
+        width:3rem;
     }
 }
 @media screen and (min-width: 768px) {
@@ -91,7 +95,9 @@ header{
     
     #pages a{
         padding:0.5rem 0;
-        width:20%;
+        border-radius: 50rem;
+        height:3rem;
+        width:4rem;
     }
 }
 @media screen and (min-width: 1024px) {
@@ -99,21 +105,23 @@ header{
         display:inline;
     }
     header{
-        height:3rem;
+        height:6rem;
         padding:1rem 1rem;
     }
     #pages a{
         padding:0.7rem 0;
         margin:0 1rem;
+        width:50%;
+        border-radius: 5rem;
     }
 
 }
 main{
     width:60%;
     background-color: color-mix(in srgb, var(--background) 100%, #fff 10%) ;
-    box-shadow: 10px 10px 0px 10px   var(--blackMixBackground),
-    -9px -5px 20px #ffffff, 
-    20px 20px 10px 20px #000000;
+    box-shadow: /*10px 10px 0px 10px   var(--blackMixBackground), */
+    -6px -6px 20px var(--secondary), 
+    10px 10px 15px  var(--primary);
     display:flex;
     justify-content: center;
     align-items:center;
@@ -132,20 +140,10 @@ main h1{
     width:100%;
     /*Text Customization*/
     letter-spacing: 0.1em;
-    background: linear-gradient(150deg, rgba(0,0,0,0.3), rgba(255,255,255,0.3));
-    box-shadow:inset -2px -2px 5px rgba(0, 0, 0,1), 
-    inset 8px 8px 5px rgba(0, 0, 0,1);
+    background: color-mix(in srgb, var(--primary) 50%, var(--secondary)50%);
+    box-shadow:inset -2px -2px 5px var(--secondary), 
+    inset 8px 8px 5px var(--primary);
     transition:0.3s;
-    text-shadow: 1px 1px 0px  #ffffff, 
-    1px 1px 0px  var(--letterBackground), 
-    1px 2px 0px  var(--letterBackground), 
-    1px 3px 0px  var(--letterBackground), 
-    1px 4px 0px  var(--letterBackground), 
-    1px 5px 0px  var(--letterBackground), 
-    1px 6px 0px  var(--letterBackground),
-    1px 7px 0px  var(--letterBackground),
-    1px 8px 0px  var(--letterBackground),
-    4px 13px 2px #000000;
     text-align: center;
     font-weight: 900;
     font-style: italic;
@@ -156,23 +154,19 @@ main h1{
     display:flex;
     flex:2 1 auto;
     
-
 }
 
 #bio p{
     width:25rem;
-    background-color: var(--text);
+    background-color:var(--background);
     padding:1rem;
-    text-shadow:1px 2px 0px #000,
-    1px 3px 0px #000;
-    box-shadow:inset -2px -2px 5px  rgba(0, 0, 0,1), 
-    inset 8px 8px 5px rgba(0, 0, 0,1);
+    box-shadow:inset -2px -2px 5px  var(--secondary), 
+    inset 8px 8px 5px var(--primary);
 }
 #myPic{ 
     background: linear-gradient(135deg, rgba(0,0,0,0.3), rgba(255,255,255,0.3));
-    box-shadow: 5px 5px 0px 5px   var(--blackMixBackground),
-    -9px -5px 20px #ffffff, 
-    10px 10px 10px 10px #000000;
+    box-shadow: -7px -5px 20px var(--secondary), 
+    12px 5px 20px  var(--primary);
     border-radius:50rem; 
 }
 
@@ -183,12 +177,48 @@ main h1{
     border-radius:50rem; 
 }
 
+#contacts{
+    background-color: var(--background);
+    text-align: center; 
+    width:20%;
+    height:12rem;
+    box-shadow:inset  -2px -2px 5px var(--secondary), 
+    inset 8px 8px 5px var(--primary);
+
+}
+#contacts a{
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    
+    
+}
+#contacts span{
+    font-weight:600;
+}
+.socials {
+    display:inline-flex ;
+    padding:0.35rem 0.35rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background: color-mix(in srgb, var(--primary) 60%, var(--secondary)60%);
+    box-shadow: -6px -6px 21px  var(--primary),  
+    6px 6px 21px var(--secondary);
+    
+}
+.socials:active{
+    transform:scale(0.96);
+    background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+    box-shadow:inset -12px -20px 21px var(--secondary),
+    inset 15px 15px  21px var(--primary);
+    -webkit-tap-highlight-color: transparent;
+}
 @media screen and (min-width: 320px){
     main{
         position: relative;
-        left:-20px;
         width:80%;
-        height:50rem;
+        height:100%;
         margin:6rem auto;  
         flex-direction: column;
     }
@@ -213,27 +243,57 @@ main h1{
     }
     #bio p{
         width:80%;
+        margin-top:2rem;
     }
     #myPic{
         width:14rem;
+        margin-top:2rem;
     }
     #myPic img{
         width:12rem;
         height:14rem;
     }
-    #role{
+    .role{
     font-size:18px;
    }
     #role-experience{
     font-size:14px;
    }
-    
-    
+    #contacts{
+        width:50%;
+        margin-top:2rem;
+        margin-bottom:2rem;
+        height:8rem;
+        padding-top:2rem;
+        padding-bottom:6rem;
+    }
+    #contacts address{
+        display:flex;
+        flex-direction: row;
+        margin:1rem auto;
+        justify-content: center;
+    }
+    .icons{
+        height:32px;
+        width:32px;
+    }
+    #social-links{
+        margin-top:1rem;
+        display:flex;
+        justify-content: center;
+    }
+    .socials{
+        margin:0 1rem;
+        padding:0.35rem 0.35rem;
+    }
+    .icons{
+        color:white;
+    }
 }
 @media screen and (min-width: 768px){
     main{
         margin:6rem auto;  
-        
+        width:87%;
     }
     #full-name div{
         width:15.7rem;
@@ -252,11 +312,25 @@ main h1{
         width:92%;
         height:93%;
     }
+    #contacts{
+        padding:2rem 0 5rem 0;
+    }
+    #contacts address{
+        justify-content: space-evenly;
+        width:30%;
+        height:20%;
+    } 
+    #contacts address .socials {
+        height:32px;
+    }
+   
+    
 }
 
 @media screen and (min-width: 1024px){
     main{
-        height:70rem;
+        height:55rem;
+        flex-wrap:wrap;
     }
     #full-name{
         position: relative;
@@ -269,7 +343,9 @@ main h1{
     }
     #bio{
         height:0rem;
-        flex-direction: row;
+        flex-direction: column;
+        flex-wrap:wrap;
+        
     }
     #bio p{
         width:30%;
@@ -279,34 +355,24 @@ main h1{
     #myPic{
         height:35rem;
         width:28rem;
+        
+       
     }
     #myPic img{
         width:94%;
         height:95%;
     }
-
-}
-
-
-footer{
-    background-color: var(--background);
-    text-align: center; 
-    width:100%;
-    height:18.1rem;
-    padding:3rem 0 3rem 0;
-    box-shadow:inset  -8px -8px 5px rgba(0, 0, 0,1), 
-    inset 25px 25px 25px rgba(0, 0, 0,1);
-
-}
-footer a{
-    text-decoration: none;
-    color:white;
-    font-weight: 600;
-}
-
-@media screen and (min-width: 1024px){
-    .icons{
-        height:32px;
-        width:32px;
+    #contacts{
+        width:21rem;
+        height:25%;
+    }
+    #contacts address{
+        display:block;
+        width:inherit;
+        height:60%;
+        margin:0.5rem 0;
+    }
+    .socials{
+        padding:0.35rem 0.35rem;
     }
 }

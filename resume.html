@@ -4,246 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./resources/styles/resumeStyle.css">
+    <script src="./resources/scripts/resumePageScript.js" defer></script>
     <title>Resume</title>
 </head>
 <body>
     <header>
-        <h1>Kristian Kirkov</h1>
         <nav id="pages">
-            <a href="./index.html">Main Page</a>
-            <a href="./resume.html">Resume</a>
-            <a>Projects</a>
+            <a href="./index.html">
+                <img src="./resources/images/home.png" alt="Home Page Icon"><span class="text-to-Hide">&nbsp;&nbsp;Main Page</span>
+            </a>
+            <a href="./resume.html">
+                <img src="./resources/images/resume.png" alt="Resume Page Icon"><span class="text-to-Hide">&nbsp;&nbsp;Resume</span>
+            </a>
+            <a>
+                <img src="./resources/images/project.png" alt="Projects Icon"><span class="text-to-Hide">&nbsp;&nbsp;Projects</span>
+            </a>
         </nav>
     </header>
     <main>
-        <section id="qualifications">
+        <div class="buttons">
             <h2>Qualifications</h2>
-            <div class="course">
+            <button class="dropDownArrow" >&#9660;</button>
+        </div>
+        
+        <section id="qualifications" class="background-text section-sizes"  >
+            <div class="resume-sections">
                     <p>2019-2022: Teesside University<br>
                     <strong>Graduated with a BSc(Hons) Games Programming , 2:2 (Second Class Honours Degree Division Two)</strong></p>
-                    <!--<h5>Modules with Grades:</h5>
-                    <table>
-                        <thead>
-                            <th scope="col">Module</td>
-                            <th scope="col">Marks</th>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">Systems Design and Database</td>
-                                <td>51</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Games Studies</td>
-                                <td >55</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Game Middleware</td>
-                                <td>75</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Maths for Games</td>
-                                <td>92</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">C++ Programming</td>
-                                <td>51</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Games Development with C++</td>
-                                <td>42</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3D Graphics Programming</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Algorithms for Games</td>
-                                <td>40</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Games Engine Construction</td>
-                                <td>61</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Journeyman</td>
-                                <td>60</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Network and Multiplayer Gaming</td>
-                                <td>43</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">AI for Games Engines</td>
-                                <td>61</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Mobile and Gaming Devices</td>
-                                <td>61</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Physics Simulation</td>
-                                <td>33(CO)</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Beta Arcade</td>
-                                <td>67</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Games Programming Project</td>
-                                <td>52</td>
-                            </tr>
-                        </tbody>
-                    </table>-->
             </div>
-            <div class="course">
+            <div class="resume-sections">
                 <p>2019-2019: International English Language Testing System (IELTS)<br>
                  <strong>With an Overall Band Score of 6.0 ; CEFR Level : B2</strong></p>
             </div>  
-            <div class="course">
-                <p>2014-2019: Foreign Language High School “Prof. D-r Asen Zlatarov”</p>
-                <!-- <div id="state-exam">
-                        <h4>State Matriculation Exams</h4>
-                        <table>
-                            <tr>
-                                <td>1.</td>
-                                <td>Bulgarian Language and Literature</td>
-                                <td>Average</td>
-                                <td>3.49</td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>English Language</td>
-                                <td>Good</td>
-                                <td>4.46</td>
-                            </tr>
-                        </table>
-                </div>
-                    
-                <div id="subjects-grade">
-                <h4>Subjects with grades:</h4>
-                <table>
-                        <thead>
-                            <th scope="col">Mandatory School Subjects</th>
-                            <th scope="col">Grade in Words</th>
-                            <th scope="col">Grade in Numbers(6-2)</th>
-                        </thead>
-                       <tbody>
-                            <tr>
-                                <th scope="row">Bulgarian Language and Literature</th>
-                                <td>Good</td>
-                                <td>4.00</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">English(1st Foreign Language)</th>
-                                <td>Very Good</td>
-                                <td>5.25</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Spanish(2nd Foreign Language)</th>
-                                <td>Good</td>
-                                <td>3.50</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">Mathematics</th>
-                                <td>Good</td>
-                                <td>3.75</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Informatics</th>
-                                <td>Good</td>
-                                <td>4.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Information Technologies</th>
-                                <td>Very Good</td>
-                                <td>5.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">History and Civilization</th>
-                                <td>Good</td>
-                                <td>4.33</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Geography and Economics</th>
-                                <td>Good</td>
-                                <td>4.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Psychology and Logic</th>
-                                <td>Good</td>
-                                <td>4.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Ehics and Law</th>
-                                <td>Excellent</td>
-                                <td>6.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Philosophy</th>
-                                <td>Very Good</td>
-                                <td>5.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">World and Personality</th>
-                                <td>Excellent</td>
-                                <td>6.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Biology and Healthy Education</th>
-                                <td>Good</td>
-                                <td>3.50</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Physics and Astronomy</th>
-                                <td>Average</td>
-                                <td>3.33</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Protection</th>
-                                <td>Good</td>
-                                <td>3.50</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Music</th>
-                                <td>Excellent</td>
-                                <td>6.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Art</th>
-                                <td>Very Good</td>
-                                <td>5.00</td>
-                                
-                            </tr>
-                            <tr>
-                                <th scope="row">Physical Education and Sport</th>
-                                <td>Excellent</td>
-                                <td>6.00</td>
-                                
-                            </tr>
-                       </tbody>
-                </table> -->
-                </div>
-                    
+            <div class="resume-sections">
+                <p>2014-2019: Foreign Language High School “Prof. D-r Asen Zlatarov”</p>      
             </div>
             
         </section>
         <!--Intership-->
-        <section id="experience">
+        <div class="buttons" >
             <h2>Experience</h2>
-            <div id="internship">
+            <button class="dropDownArrow" >&#9660;</button>
+        </div>
+       
+        <section id="experience" class="background-text section-sizes" style="display: none" >
+            
+            <div  class="resume-sections">
                 <h3>2022-2023: Internship at Moonboi Studio</h3>
                 <ul>
                     <li>Worked on the UI for a Mobile port.</li>
@@ -251,7 +57,7 @@
                     <li>Spawning characters from the Character Selection level to the battle level.</li>
                 </ul>
             </div>
-            <div id="Part-Time">
+            <div  class="resume-sections">
                 <h3>2022-current: Part-time at KFC as a Cashier</h3>
                 <ul>
                     <li>Cashier at the Front of House.</li>
@@ -261,31 +67,21 @@
                 </ul>
             </div>
         </section>        
-        <section id="software-skills">
-            <h2>Software Skills</h2>
-            <p>C++,  C#,  CSS,  Git ,  GitHub Desktop
-            ,  HTML, Unity,  JavaScript,  Unreal Engine 4/5,  Unreal Engine API.</p>
+        <h2>Software Skills</h2>
+        <section id="software-skills" class="background-text section-sizes"  >
+           
+            <p class="resume-sections">C++,  C#,  CSS,  Git ,  GitHub Desktop
+            , HTML, Unity,  JavaScript,  Unreal Engine 4/5,  Unreal Engine API.</p>
         </section>
-        <section id="soft-skills">
-            <h2>Soft Skills</h2>
-            <p>Analytical Skills , Communication, Problem-Solving Skills 
+        <h2>Soft Skills</h2>
+        <section id="soft-skills" class="background-text section-sizes" >
+           
+            <p class="resume-sections">Analytical Skills , Communication, Problem-Solving Skills 
                 , Teamwork,  Team Collaboration, Time Management.</p>
         </section>  
       
         
     </main>
-    <footer>
-        <h2>Contact Info</h2>
-            Kristian Kirkov
-            <address>
-                Email:<a href="mailto:kristiankirkov0@gmail.com">kristiankirkov0@gmail.com</a><br>
-                Tel:<a href="tel:+447563122432">(+44) 0756 312 2432</a>
-            </address>
-            <br>
-            <section id="Social Links">
-                <a href="https://github.com/kristian0049" target="_blank"><img src="./resources/images/githubIcon.png" alt="Github link as an icon"></a>
-                <a href="https://www.linkedin.com/in/kristian-kirkov-555926204/" target="_blank"><img src="./resources/images/linkedinIcon.png" alt="LinkedIn link as an icon"></a>
-            </section>
-    </footer>
+   
 </body>
 </html>
